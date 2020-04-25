@@ -1,0 +1,65 @@
+@import "./tailwind.css";
+
+.agregar {
+  @apply m-4;
+  @apply flex flex-col items-center justify-center;
+
+  input {
+    @apply border border-teal-400 p-2 rounded-md w-1/2;
+  }
+
+  button {
+    @apply bg-teal-500 border border-transparent p-2 text-white rounded-md;
+    &:hover {
+      @apply bg-teal-800;
+    }
+  }
+
+  &__encuesta {
+    @apply w-2/3;
+    input {
+      @apply w-3/4 rounded-l-md rounded-r-none;
+    }
+    button {
+      @apply w-1/4 rounded-r-md rounded-l-none;
+    }
+  }
+
+  &__opciones {
+    @apply flex flex-col w-full items-center;
+
+    input {
+      @apply border border-teal-200 my-2 p-2;
+    }
+
+    button {
+      @apply w-1/2;
+    }
+  }
+}
+
+.encuesta {
+  @apply my-4;
+
+  &__pregunta {
+    @apply p-4 text-xl;
+  }
+
+  &__respuestas {
+    li {
+      @apply p-4 bg-gray-500 relative text-white rounded-lg overflow-hidden my-4;
+    }
+
+    &--text {
+      @apply relative z-50;
+    }
+
+    &--progress {
+      @apply bg-gray-700 absolute top-0 left-0 bottom-0 opacity-50 z-0;
+
+      span {
+        @apply absolute right-0 top-0 mr-2 text-xs;
+      }
+    }
+  }
+}
