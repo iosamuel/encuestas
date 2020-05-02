@@ -1,0 +1,27 @@
+.encuesta {
+  @apply my-4;
+
+  &__pregunta {
+    @apply p-4 text-xl;
+  }
+
+  &__respuestas {
+    li {
+      @apply p-4 bg-gray-500 relative text-white rounded-lg overflow-hidden my-4;
+      @apply cursor-pointer;
+    }
+
+    &--text {
+      @apply relative z-50;
+    }
+
+    &--progress {
+      @apply bg-gray-700 absolute top-0 left-0 bottom-0 opacity-50 z-0;
+      @apply transition-all duration-150 ease-out;
+
+      span {
+        @apply absolute right-0 top-0 mr-2 text-xs;
+      }
+    }
+  }
+}
